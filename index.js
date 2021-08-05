@@ -3,7 +3,7 @@ const cashGiven = document.querySelector("#cash-given");
 const checkButton = document.querySelector("#check-button");
 const errorMessage = document.querySelector("#error-message");
 const noOfNotes = document.querySelectorAll(".no-of-notes");
-const changeTable = document.querySelector("#change-table");
+const changeTable = document.querySelector(".table-container");
 const nextButton = document.querySelector("#next-button");
 const cashGivenInput = document.querySelector(".cashGivenInput");
 
@@ -17,6 +17,7 @@ function validateBillAmount(){
         showMessage("Enter valid bill amount");
     }
     else{
+        nextButton.style.display = "none";
         showFields();
         hideMessage();
     }
