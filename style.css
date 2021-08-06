@@ -39,9 +39,9 @@ table, td, th, tr {
 }
 
 /* Media Query */
-@media (max-width: 480px){
+@media (min-width: 320px) and (max-width: 480px){
     .section{
-        width: 100vw;
+        width: 80vw;
     }
     input{
         width: 100%;
