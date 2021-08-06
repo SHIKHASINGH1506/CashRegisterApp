@@ -31,11 +31,22 @@ button{
     color: var(--dark-grey);
     font-weight: bold;
 }
+.change-table{
+    margin: 1rem 0;
+}
+table{
+    width: 100%;
+}
+th, td{
+    word-wrap: break-word;
+}
+
 table, td, th, tr {
-    text-align: center;
-    border: 2px solid var(--off-white);
+    border: 2px solid var(--dark-grey);
     border-collapse: collapse;
-    padding: .5rem;
+    padding: .2rem;
+    color: var(--dark-grey);
+    background-color: var(--off-white);
 }
 
 /* Media Query */
@@ -45,5 +56,8 @@ table, td, th, tr {
     }
     input{
         width: 100%;
+    }
+    table{
+        width:100%;
     }
 }

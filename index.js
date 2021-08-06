@@ -6,6 +6,7 @@ const noOfNotes = document.querySelectorAll(".no-of-notes");
 const changeTable = document.querySelector(".table-container");
 const nextButton = document.querySelector("#next-button");
 const cashGivenInput = document.querySelector(".cashGivenInput");
+const totalNotes = document.querySelector("#total-notes");
 
 const availableNotes = [2000, 500, 100, 20, 10, 5, 1];
 
@@ -40,15 +41,18 @@ function validateBillAndCashAmount(){
     }
 }
 
+var noteCount = 0 ;
 function calculateReturnAmount(returnAmount){
-    console.log(returnAmount);
+    //console.log(returnAmount);
     for(var i=0; i<availableNotes.length; i++){
         const numberOfNotes = Math.trunc(returnAmount / availableNotes[i]);
         if(numberOfNotes!=0){
             noOfNotes[i].innerText = numberOfNotes;
+            noteCount = noteCount+numberOfNotes;
         }
         returnAmount %= availableNotes[i];
     }
+    totalNotes.innerText = noteCount;
 }
 
 function showTable(){
