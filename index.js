@@ -7,6 +7,7 @@ const changeTable = document.querySelector(".table-container");
 const nextButton = document.querySelector("#next-button");
 const cashGivenInput = document.querySelector(".cashGivenInput");
 const totalNotes = document.querySelector("#total-notes");
+const returnCash = document.querySelector("#return-cash");
 
 const availableNotes = [2000, 500, 100, 20, 10, 5, 1];
 
@@ -29,7 +30,8 @@ function validateBillAndCashAmount(){
     if(billAmount.value>0){
         if(+cashGiven.value >= +billAmount.value){
             showTable();
-            calculateReturnAmount(cashGiven.value - billAmount.value);    
+            calculateReturnAmount(cashGiven.value - billAmount.value); 
+            returnCash.innerText = cashGiven.value - billAmount.value;   
         }
         else{
             showMessage("Cash is less than bill, please enter right amount");

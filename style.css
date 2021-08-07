@@ -31,28 +31,33 @@ button{
     color: var(--dark-grey);
     font-weight: bold;
 }
-.change-table{
-    margin: 1rem 0;
+#change-table{
+    margin: 1rem auto 0;
 }
 table{
-    width: 100%;
+    width: 50%;
 }
 th, td{
     word-wrap: break-word;
 }
 
-table, td, th, tr {
-    border: 2px solid var(--dark-grey);
+table, td, th {
+    /* border: 2px solid var(--dark-grey);
     border-collapse: collapse;
     padding: .2rem;
     color: var(--dark-grey);
+    background-color: var(--off-white); */
+    padding: 0.2rem;
+    color: var(--dark-grey);
     background-color: var(--off-white);
+    border: 2px solid var(--dark-grey);
+    border-collapse: collapse;
 }
 
 /* Media Query */
 @media (min-width: 320px) and (max-width: 480px){
     .section{
-        width: 80vw;
+        width: 90vw;
     }
     input{
         width: 100%;
