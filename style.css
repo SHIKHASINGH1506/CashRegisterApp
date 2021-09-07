@@ -42,11 +42,6 @@ th, td{
 }
 
 table, td, th {
-    /* border: 2px solid var(--dark-grey);
-    border-collapse: collapse;
-    padding: .2rem;
-    color: var(--dark-grey);
-    background-color: var(--off-white); */
     padding: 0.2rem;
     color: var(--dark-grey);
     background-color: var(--off-white);
